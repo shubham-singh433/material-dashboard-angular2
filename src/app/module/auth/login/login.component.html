@@ -1,0 +1,47 @@
+<div class="container">
+  <mat-card class="card-conatiner w-50 h-40 ">
+    <div class=" m-30  w-100  text-container ">
+      <h4 class="fs-10">Login</h4>
+    </div>
+
+
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="username"
+            formControlName="username"
+          />
+        </div>
+        <div class="form-group input">
+          <label for="formGroupExampleInput2">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="formGroupExampleInput2"
+            placeholder="password"
+            formControlName="password"
+          />
+        </div>
+        <mat-card-actions class="actions">
+          
+          <button
+            type="submit"
+            class="btn btn-secondary w-75 p-2 m-2 shade"
+            style="background-color: #27cbb8"
+          >
+            Login
+          </button>
+        </mat-card-actions
+        >
+      </form>
+    </mat-card-content>
+    <div class="link">
+ <a routerLink="/register"><p class="register-link">Not registered ? click here</p></a>
+    </div>
+     
+  </mat-card>
+</div>
