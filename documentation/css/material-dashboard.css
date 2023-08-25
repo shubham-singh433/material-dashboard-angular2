@@ -3064,6 +3064,7 @@ tbody.collapse.show {
     pointer-events: none; }
 
 .input-group {
+  color: black;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3158,7 +3159,7 @@ tbody.collapse.show {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #0e0e0f;
   text-align: center;
   white-space: nowrap;
   background-color: transparent;

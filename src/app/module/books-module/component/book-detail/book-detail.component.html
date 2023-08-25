@@ -1,0 +1,37 @@
+<div class="back px-10">
+  <a routerLink="/home/books-list" class="link">
+    <fa-icon [icon]="arrow" size="2x"></fa-icon>
+  </a>
+</div>
+
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col img w-20 h-50">
+      <img
+        class="card-img-top"
+        [src]="data.volumeInfo?.imageLinks?.thumbnail"
+        alt="Card image cap"
+        height="500"
+        width="10"
+      />
+    </div>
+    <div class="border border-2  rounded  mb-40 details">
+      <br />
+      <h1 class="text-center">
+        <em>{{ data.volumeInfo?.title | titlecase }}</em>
+      </h1>
+      <p class="text-center">
+        <b>Categories : </b>{{ data.volumeInfo?.categories[0] }}
+      </p>
+      <p *ngFor="let auth of data.volumeInfo?.authors">
+        <b>Author:</b> {{ auth }}
+      </p>
+      <p class="review text-center">
+        <b>Pages :</b>{{ data.volumeInfo?.pageCount }}
+      </p>
+      <p class="text-start">
+        {{ data?.volumeInfo?.description }}
+      </p>
+    </div>
+  </div>
+</div>

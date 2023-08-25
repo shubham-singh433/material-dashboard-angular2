@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
-import { ToastrService } from "ngx-toastr";
+// import { NotificationsComponent } from "../../../notifications/notifications.component";
 import { Router } from "@angular/router";
+// import { ToastrService } from "ngx-toastr";
 import { UserService } from "../../../service/user.service";
 
 @Component({
@@ -20,13 +21,11 @@ export class RegisterComponent implements OnInit {
     confirmpassword: new FormControl<string>(""),
   });
   constructor(
-    private toastr: ToastrService,
+    // private toastr: ToastrService,
     private route: Router,
     private user: UserService
   ) {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 
   onSubmit(): void {
     if (this.registerForm.value.firstname && this.registerForm.value.lastname) {
@@ -55,15 +54,18 @@ export class RegisterComponent implements OnInit {
             this.registerForm.value.confirmpassword
         ) {
           //check if password matches or not and user does not exist privously
-          this.toastr.info("Registeration successful", "Registered", {
-            timeOut: 2000,
-          });
+          // this.toastr.success(
+          //   "Registeration successful",
+          //   "Registered",{
+          //     timeOut:500,
+          //   }
+          // );
           this.user.setUser(this.username, this.name);
           this.route.navigate(["/login"]);
         } else if (localStorage.getItem(this.username)) {
-          this.toastr.error("user already exist", "", {
-            timeOut: 800,
-          });
+          // this.toastr.error("user already exist", "",{
+          //   timeOut:500,
+          // });
         }
       }
     }
@@ -75,9 +77,9 @@ export class RegisterComponent implements OnInit {
     var result = user_pattern.test(username);
     console.log(result);
     if (!result) {
-      this.toastr.error("Enter valid Email", "", {
-        timeOut: 800,
-      });
+      // this.toastr.info("Enter valid Email", "",{
+      //   timeOut:500,
+      // });
     }
     return result;
   }

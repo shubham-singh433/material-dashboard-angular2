@@ -1,15 +1,12 @@
-<div
-  class="container"
->
-  <mat-card  class="card-conatiner w-80 h-90"
-  >
-    <div class=" m-30  w-100  text-container ">
+<div class="container">
+  <mat-card class="card-conatiner w-80 h-90">
+    <div class="m-30 w-100 text-container">
       <h4 class="fs-10">Register</h4>
     </div>
 
     <mat-card-content>
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-        <div class="form-group" >
+        <div class="form-group">
           <label for="formGroupExampleInput">Username</label>
           <input
             type="text"
@@ -18,7 +15,7 @@
             formControlName="username"
           />
         </div>
-         <div class="form-group" >
+        <div class="form-group">
           <label for="formGroupExampleInput">First Name</label>
           <input
             type="text"
@@ -26,8 +23,8 @@
             placeholder="firstname"
             formControlName="firstname"
           />
-          </div>
-            <div class="form-group" >
+        </div>
+        <div class="form-group">
           <label for="formGroupExampleInput">Last Name</label>
           <input
             type="text"
@@ -57,14 +54,18 @@
           />
         </div>
         <mat-card-actions class="actions">
-          <button type="submit" class="btn btn-secondary w-75 p-2 m-2 shade" style="background-color: #27cbb8;" >
-          Register
+          <button
+            type="submit"
+            class="btn btn-secondary w-75 p-2 m-2 shade"
+            style="background-color: #cb2727; color: white"
+          >
+            Register
           </button>
-          </mat-card-actions
-        >
+        </mat-card-actions>
       </form>
-      <div class="register" > <a routerLink="/login"><p class="register-link">Go to Login</p></a></div>
-   
+      <div class="register">
+        <a routerLink="/login"><p class="register-link">Go to Login</p></a>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>

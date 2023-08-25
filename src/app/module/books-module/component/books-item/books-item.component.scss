@@ -1,0 +1,87 @@
+.conatiner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+.select {
+    align-content: flex-start;
+    padding-left: 26px
+}
+
+.card {
+    width: 25rem;
+        height: 27rem;
+    margin: 8px;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 2px 5px 9px rgba(10, 7, 7, 0.4);
+    // display: flex;
+    // justify-content: end;
+    // align-items: end;
+    // background-color: aqua;
+}
+.card:hover {
+    transform: scale(1.05);
+    // background-color: rgb(186, 176, 189);
+    transition: .4s, background-position 0s;
+}
+
+.card-content {
+    margin: 8px;
+    height: 20rem;
+}
+
+.card-text {
+    text-align: center;
+    // font-size: 2px;
+    // overflow: overlay;
+}
+
+.card-body {
+width: "70%";
+    height: 8rem;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.btn-cont{
+   justify-self: flex-end;
+   align-self: end;
+   margin-bottom:40px;
+    display: flex;
+        justify-self: center;
+        align-self: center;
+//    margin-left: 100px;
+}
+.desc{
+    height: 15rem;
+    // background-color: rgb(247, 153, 30);
+    // overflow: hidden;
+    // display: flex;
+    // justify-self: center;
+    // align-self: center;
+}
+p{
+    overflow: hidden;
+}
+.nodata{
+    // background-color: aqua;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.select {
+    margin-top: 60px;
+}

@@ -1,0 +1,62 @@
+<!-- <p *ngFor="let point of data.items"> -->
+  <div style="
+  margin-top: 60px;
+  background-color: grey;;
+  ">
+    <mat-paginator
+  [length]="length"
+  [pageSize]="items"
+  [pageSizeOptions]="[3, 6, 9, 12]"
+  aria-label="Select page"
+  (page)="handlePageEvent($event)"
+>
+</mat-paginator>
+  </div>
+
+<div class="welcome"><h3 class="fnt">Welcome , {{name}}</h3></div>
+<div class="conatiner">
+  <div
+    *ngFor="
+      let slide of data | paginate : { itemsPerPage: items, currentPage: page }
+    "
+    class="card"
+  >
+    <a [routerLink]="['/home/books-deatils', slide.id]">
+      <div class="card-content">
+        <img
+          class="card-img-top mt-20"
+          [src]="slide.volumeInfo?.imageLinks?.thumbnail"
+          alt="Card image cap"
+          height="230"
+          width="20"
+        />
+        <div class="card-body w-40 h-35">
+          <p class="text-start card-text">
+            {{ slide.volumeInfo?.title | titlecase }}
+          </p>
+          <p class="text-start card-text">
+            Author : {{ slide.volumeInfo?.authors[0] | titlecase }}
+          </p>
+          <p class="text-start card-text">
+            Category : {{ slide.volumeInfo?.categories[0] | titlecase }}
+          </p>
+          <p class="text-start card-text">
+            Pages : {{ slide.volumeInfo?.pageCount }}
+          </p>
+        </div>
+      </div>
+    </a>
+     <div class="btn-cont" >
+          <button type="button" class="btn" (click)="Additem(slide.id)">
+            Add To Collection
+          </button>
+        </div>
+  </div>
+</div>
+<div class="pagination">
+  <pagination-controls
+    class="my-pagination"
+    (pageChange)="page = $event"
+  ></pagination-controls>
+</div>
+<!-- </p> -->

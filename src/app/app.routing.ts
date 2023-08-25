@@ -1,34 +1,36 @@
-import { NgModule } from '@angular/core';
-import { CommonModule, } from '@angular/common';
-import { BrowserModule  } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { BrowserModule } from "@angular/platform-browser";
+import { Routes, RouterModule } from "@angular/router";
 
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+// import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
+// import { LoginComponent } from "./module/auth/login/login.component";
+// import { AuthModule } from "./module/auth/auth.module";
+// import { AuthModule } from "./module/auth/auth.module";
+import {authgaurdGuard} from './Guard/authguard.guard'
 
-const routes: Routes =[
+const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, {
-    path: '',
-    component: AdminLayoutComponent,
-    children: [{
-      path: '',
-      loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
-    }]
-  }
+    path: "",
+    loadChildren: () =>
+      import("./module/auth/auth.module").then((m) => m.AuthModule),
+  },
+  {
+    path: "home",
+    loadChildren: () =>
+      import("./module/books-module/books-module.module").then(
+        (m) => m.BooksModuleModule
+      ),
+    canActivate: [authgaurdGuard],
+  },
+  // {
+  //   path:"login",
+  //   component: LoginComponent,
+  // }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BrowserModule,
-    RouterModule.forRoot(routes,{
-       useHash: true
-    })
-  ],
-  exports: [
-  ],
+  imports: [CommonModule, BrowserModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule, CommonModule, BrowserModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

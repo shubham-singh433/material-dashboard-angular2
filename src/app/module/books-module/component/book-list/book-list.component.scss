@@ -1,0 +1,88 @@
+.conatiner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F3F7
+}
+
+mat-paginator {
+    // background-color: #eeeeee;
+    background-color: #F5F3F7;
+}
+
+.card {
+    width: 25rem;
+    height: 27rem;
+    margin: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 5px 9px rgba(10, 7, 7, 0.4);
+}
+
+.card-content {
+    margin: 15px;
+    height: 20px;
+}
+
+.card-text {
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-body {
+    width: "70%";
+    height: 8rem;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    // background-color: rgb(243, 200, 74);
+    transition: .4s, background-position 0s;
+}
+
+.btn-cont {
+    // align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20rem;
+    height: 50px;
+    // background-color: aquamarine;
+}
+
+.btn {
+    background-color: #2A324B
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: rgb(223, 223, 223);
+    background-color: #F5F3F7;
+}
+
+.fnt {
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #F5F3F7;
+}
+
+.pagination {
+    // margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F3F7;
+    // background-color: white;
+}

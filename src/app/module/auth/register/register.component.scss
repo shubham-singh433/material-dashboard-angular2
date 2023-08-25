@@ -1,0 +1,66 @@
+h4 {
+    display: inline;
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    // background-color: #F2F2F2;
+    // margin: 0;
+}
+
+.shade {
+    box-shadow: 0px 4px 8px rgba(58, 57, 57, 0.4);
+
+}
+
+.submitbtn {
+    width: 40px;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    // overflow: hidden;
+    // background-color: aqua;
+    height: 30px;
+}
+
+.card-conatiner {
+    align-self: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(24, 23, 23, 0.4);
+    height: 85%;
+    width: 50%;
+    align-self: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.register {
+    width: max-content;
+}
+
+a {
+    width: min-content;
+    text-decoration: none;
+    color: rgb(106, 119, 215);
+
+}
+
+p {
+    width: max-content;
+}
+
+@media screen {}
