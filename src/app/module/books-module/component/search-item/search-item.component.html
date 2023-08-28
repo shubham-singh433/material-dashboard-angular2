@@ -1,7 +1,7 @@
 <!-- <p *ngFor="let point of data.items"> -->
   <div style="
   margin-top: 40px;
-  background-color:#eeeeee;;
+  background-color: grey;;
   ">
     <mat-paginator
   [length]="length"
@@ -13,6 +13,7 @@
 </mat-paginator>
   </div>
 
+<div class="welcome"><h3 class="fnt">Results for,{{searchText|titlecase}}</h3></div>
 <div class="conatiner">
   <div
     *ngFor="
@@ -20,18 +21,16 @@
     "
     class="card"
   >
-  <!-- <p *ngIf="slide==null;else product"></p> -->
-  <!-- <ng-template #product> -->
     <a [routerLink]="['/home/books-deatils', slide.id]">
       <div class="card-content">
         <img
-          class="card-img-top mt-20"
+          class="card-img-top mt-20 img"
           [src]="slide.volumeInfo?.imageLinks?.thumbnail"
           alt="Card image cap"
-          height="250"
+          height="230"
           width="20"
         />
-        <div class="card-body w-40 h-40">
+        <div class="card-body w-40 h-35">
           <p class="text-start card-text">
             {{ slide.volumeInfo?.title | titlecase }}
           </p>
@@ -52,7 +51,6 @@
             Add To Collection
           </button>
         </div>
-        <!-- </ng-template> -->
   </div>
 </div>
 <div class="pagination">

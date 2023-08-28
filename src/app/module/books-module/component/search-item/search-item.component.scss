@@ -7,7 +7,8 @@
     align-items: center;
     background-color: #F5F3F7
 }
-mat-paginator{
+
+mat-paginator {
     // background-color: #eeeeee;
     background-color: #F5F3F7;
 }
@@ -15,6 +16,7 @@ mat-paginator{
 .card {
     width: 25rem;
     height: 27rem;
+    // aspect-ratio: 2/2;
     margin: 8px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
@@ -78,6 +80,15 @@ a {
 }
 
 .pagination {
-    margin-top: 30px;
+    // margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F3F7;
     // background-color: white;
+    color: black;
+}
+
+.img {
+    aspect-ratio: 3/4;
 }
