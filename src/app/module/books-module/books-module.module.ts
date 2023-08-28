@@ -15,15 +15,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchItemComponent } from './component/search-item/search-item.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import {authgaurdGuard} from '../../Guard/authguard.guard'
-import {NavbarComponent} from '../books-module/component/navbar/navbar.component'
-import {SidebarComponent} from './component/sidebar/sidebar.component'
+// import {NavbarComponent} from '../books-module/component/navbar/navbar.component'
+// import {SidebarComponent} from './component/sidebar/sidebar.component'
+import {ComponentsModule} from '../../components/components.module'
 
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    // canActivate: [authgaurdGuard],
+    canActivate: [authgaurdGuard],
   },
   // { path: 'bookslist', component: BookListComponent },
   {
@@ -45,13 +46,13 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     BookListComponent,
-    NavbarComponent,
+    // NavbarComponent,
     HomeComponent,
     BookDetailComponent,
     BooksItemComponent,
     SearchItemComponent,
     FilterPipe,
-    SidebarComponent,
+    // SidebarComponent,
   ],
   imports: [
     RouterModule.forChild(routes),
@@ -62,6 +63,7 @@ const routes: Routes = [
     FontAwesomeModule,
     ReactiveFormsModule,
     FormsModule,
+    ComponentsModule,
   ],
 })
 export class BooksModuleModule {}

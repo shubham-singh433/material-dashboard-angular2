@@ -23,10 +23,7 @@ const routes: Routes = [
       ),
     canActivate: [authgaurdGuard],
   },
-  // {
-  //   path:"login",
-  //   component: LoginComponent,
-  // }
+
 ];
 
 @NgModule({

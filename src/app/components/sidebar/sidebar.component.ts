@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+
+declare const $: any;
 @Component({
   selector: "app-sidebar",
   templateUrl: "./sidebar.component.html",
@@ -6,13 +8,21 @@ import { Component, OnInit } from "@angular/core";
 })
 export class SidebarComponent implements OnInit {
 
+
   constructor() {}
 
   ngOnInit() {
-  }
 
-  // checking()
-  // {
-  //   alert("hello there ");
-  // }
+   
+  }
+  isMobileMenu() {
+    if ($(window).width() > 991) {
+      return false;
+    }
+    return true;
+  }
+  checking()
+  {
+    alert("hello there ");
+  }
 }

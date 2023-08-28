@@ -1,6 +1,6 @@
 <!-- <p *ngFor="let point of data.items"> -->
   <div style="
-  margin-top: 60px;
+  margin-top: 40px;
   background-color: grey;;
   ">
     <mat-paginator
@@ -24,7 +24,7 @@
     <a [routerLink]="['/home/books-deatils', slide.id]">
       <div class="card-content">
         <img
-          class="card-img-top mt-20"
+          class="card-img-top mt-20 img"
           [src]="slide.volumeInfo?.imageLinks?.thumbnail"
           alt="Card image cap"
           height="230"
